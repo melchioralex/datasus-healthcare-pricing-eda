@@ -42,7 +42,8 @@ A primeira etapa consistiu em analisar a estrutura da base de dados e verificar 
 SELECT *
 FROM preco_sus
 LIMIT 10
-```text
+
+```
 
 Também foi realizada uma consulta para identificar os diferentes medicamentos registrados na base:
 
