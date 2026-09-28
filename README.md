@@ -50,7 +50,7 @@ Também foi realizada uma consulta para identificar os diferentes medicamentos r
 ```sql
 SELECT DISTINCT no_pdm
 FROM preco_sus
-```text
+```
 
 Essa etapa permitiu conhecer a estrutura dos dados e identificar os medicamentos disponíveis para análises posteriores.
 
@@ -75,7 +75,7 @@ SELECT
     vl_preco_unitario,
     vl_preco_total
 FROM preco_sus
-```text
+```
 
 A criação da tabela foi posteriormente confirmada através da consulta:
 
@@ -83,7 +83,7 @@ A criação da tabela foi posteriormente confirmada através da consulta:
 SELECT *
 FROM preco_sus_filtrado
 LIMIT 10
-```text
+```
 
 ## Principais variáveis utilizadas
 
@@ -130,7 +130,7 @@ FROM preco_sus_filtrado
 WHERE LOWER(no_pdm) LIKE '%dipirona%'
 GROUP BY no_pdm, sg_uf
 ORDER BY preco_medio_unitario DESC
-```text
+```
 
 ## 📊 Resultado
 
@@ -188,7 +188,7 @@ ORDER BY
     sg_uf,
     CAST(REPLACE(vl_preco_unitario, ',', '.') AS FLOAT) DESC
 
-```text
+```
 
 ## 🔍 Observações
 
