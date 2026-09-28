@@ -41,13 +41,15 @@ A primeira etapa consistiu em analisar a estrutura da base de dados e verificar 
 ```sql
 SELECT *
 FROM preco_sus
-LIMIT 10;
+LIMIT 10
+```text
 
 Também foi realizada uma consulta para identificar os diferentes medicamentos registrados na base:
 
 ```sql
 SELECT DISTINCT no_pdm
-FROM preco_sus;
+FROM preco_sus
+```text
 
 Essa etapa permitiu conhecer a estrutura dos dados e identificar os medicamentos disponíveis para análises posteriores.
 
@@ -71,14 +73,16 @@ SELECT
     no_pdm,
     vl_preco_unitario,
     vl_preco_total
-FROM preco_sus;
+FROM preco_sus
+```text
 
 A criação da tabela foi posteriormente confirmada através da consulta:
 
 ```sql
 SELECT *
 FROM preco_sus_filtrado
-LIMIT 10;
+LIMIT 10
+```text
 
 ## Principais variáveis utilizadas
 
@@ -125,6 +129,7 @@ FROM preco_sus_filtrado
 WHERE LOWER(no_pdm) LIKE '%dipirona%'
 GROUP BY no_pdm, sg_uf
 ORDER BY preco_medio_unitario DESC
+```text
 
 ## 📊 Resultado
 
@@ -181,6 +186,8 @@ WHERE no_pdm LIKE '%DIPIRONA SÓDICA%'
 ORDER BY
     sg_uf,
     CAST(REPLACE(vl_preco_unitario, ',', '.') AS FLOAT) DESC
+
+```text
 
 ## 🔍 Observações
 
